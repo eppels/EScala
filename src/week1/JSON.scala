@@ -1,3 +1,5 @@
+package week1
+
 /**
  * Extended Exercise 2 - JSON
  * I chose to do this one using polymorphism because I wanted each concrete class to have a good toString implementation
