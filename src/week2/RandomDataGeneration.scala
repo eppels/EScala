@@ -1,3 +1,5 @@
+package week2
+
 /**
  * Created by Max on 4/10/2017.
  */
@@ -62,7 +64,7 @@ case class Distribution[T](possibilities: Seq[(T, Double)]) {
 object DistributionLogic extends App {
   //wasn't sure how to interpret the questions about adding methods to implement the models, this is what I came up with...
   val simpleDistribution = Distribution.uniform(SimpleSentences.allCombos)
-  val sensicalDistribution = Distribution(SimpleSentences.allCombos.map(s => if (SensicalSentences.allCombos.contains(s)) (s, 1.0 / SensicalSentences.allCombos.size) else (s, 0)))
+//  val sensicalDistribution = Distribution(SimpleSentences.allCombos.map(s => if (SensicalSentences.allCombos.contains(s)) (s, 1.0 / SensicalSentences.allCombos.size) else (s, 0)))
 
   //trying to skp to the complex problem...
   val cookGoodSmell = ("Good smell", .3)

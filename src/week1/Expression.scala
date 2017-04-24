@@ -1,3 +1,5 @@
+package week1
+
 /**
  * Extended Exercise 1 - A calculator
  * Chose to implement eval using pattern matching because I thought it would be easier to see the implementtation all in one place instead of spread across the classes
@@ -28,19 +30,23 @@ sealed trait Expression {
     }
   }
 }
+
+final case class Number(value: Double) extends Expression
 final case class Addition(left: Expression, right: Expression) extends Expression
 final case class Subtraction(left: Expression, right: Expression) extends Expression
-final case class Division(numerator: Expression, denominator: Expression) extends Expression
 final case class SquareRoot(value: Expression) extends Expression
-final case class Number(value: Double) extends Expression
+final case class Division(numerator: Expression, denominator: Expression) extends Expression
+
 
 sealed trait EvalResult {
   def result : Double
 }
-final case class Success(result: Double) extends EvalResult
+
 final case class Failure(reason: String) extends EvalResult {
   val result = Double.NaN
 }
+
+final case class Success(result: Double) extends EvalResult
 
 object TestCalculator extends App {
   println(SquareRoot(Number(-1.0)).eval)

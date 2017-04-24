@@ -1,3 +1,5 @@
+package week1
+
 /**
  * Extended Exercise 3 - Music
  * Not entirely sure what to do with this one - choosing to model Songs, Artists, Albums, Playlists, Genres in a pretty simple way that could be extensible
